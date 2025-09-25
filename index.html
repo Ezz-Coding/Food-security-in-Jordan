@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Food security in Jordan</title>
+  <link rel="stylesheet" href="style.css">
+
+  <!-- AOS Animation -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <!-- Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <!-- 🟢 Navbar -->
+  <header>
+    <nav>
+      <h1>الأمن الغذائي</h1>
+      <ul>
+        <li><a href="#stats">الإحصائيات</a></li>
+        <li><a href="#agriculture">أنواع الزراعة</a></li>
+        <li><a href="#irrigation">أنظمة الري</a></li>
+        <li><a href="#crops">المحاصيل</a></li>
+        <li><a href="#plants">النباتات</a></li>
+        <li><a href="#vertical">الزراعة العمودية</a></li>
+        <li><a href="#diseases">الأمراض</a></li>
+        <li><a href="#challenges">التحديات</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- 🟢 Hero -->
+  <section class="hero">
+    <div id="three-container">
+      <!-- هنا تضع كود Spline أو 3D -->
+      <iframe src="https://my.spline.design/placeholder" frameborder="0" width="100%" height="100%"></iframe>
+    </div>
+
+    <div class="hero-text" data-aos="fade-up">
+      <h2>الأمن الغذائي في الأردن</h2>
+      <p>معلومات وإحصائيات دقيقة حول الزراعة، المياه، المحاصيل، والابتكارات</p>
+      <a href="#stats" class="btn">ابدأ الاستكشاف</a>
+    </div>
+  </section>
+
+  <!-- 🟢 Statistics -->
+  <section id="stats" class="section">
+    <h2 data-aos="fade-up">إحصائيات الزراعة في الأردن</h2>
+    <p class="desc" data-aos="fade-up">
+      يشكل القطاع الزراعي جزءًا أساسيًا من الاقتصاد الأردني رغم محدودية الموارد الطبيعية. 
+      نحو 80% من الأراضي زراعة بعلية، بينما 20% مروية تنتج الحصة الأكبر من الغذاء.
+    </p>
+    <div class="charts">
+      <div class="chart-box" data-aos="zoom-in">
+        <h3>أنواع الزراعة</h3>
+        <canvas id="agricultureChart"></canvas>
+      </div>
+      <div class="chart-box" data-aos="zoom-in">
+        <h3>إنتاج المحاصيل (ألف طن)</h3>
+        <canvas id="cropsChart"></canvas>
+      </div>
+      <div class="chart-box wide" data-aos="zoom-in">
+        <h3>تطور إنتاج الطماطم (2010-2023)</h3>
+        <canvas id="lineChart"></canvas>
+      </div>
+    </div>
+  </section>
+
+  <!-- 🟢 Agriculture Section -->
+  <section id="agriculture" class="section dark">
+    <h2 data-aos="fade-up">أنواع الزراعة</h2>
+    <div class="cards">
+      <div class="card" data-aos="flip-right">🌾 الزراعة البعلية <p>تعتمد على مياه الأمطار</p></div>
+      <div class="card" data-aos="flip-right">💧 الزراعة المروية <p>تركز في الأغوار</p></div>
+      <div class="card" data-aos="flip-right">🏠 البيوت البلاستيكية <p>إنتاج طوال السنة</p></div>
+    </div>
+  </section>
+
+  <!-- 🟢 Irrigation -->
+  <section id="irrigation" class="section">
+    <h2 data-aos="fade-up">أنظمة الري</h2>
+    <div class="cards">
+      <div class="card" data-aos="zoom-in">💧 ري بالتنقيط <p>الأكثر توفيرًا للمياه</p></div>
+      <div class="card" data-aos="zoom-in">💦 ري بالرش <p>يستخدم للعلفيات</p></div>
+      <div class="card" data-aos="zoom-in">🌊 ري بالغمر <p>قديم وقليل الاستخدام</p></div>
+    </div>
+  </section>
+
+  <!-- 🟢 Crops -->
+  <section id="crops" class="section dark">
+    <h2 data-aos="fade-up">المحاصيل</h2>
+    <div class="cards">
+      <div class="card" data-aos="fade-right">🍅 الطماطم (متوفرة)</div>
+      <div class="card" data-aos="fade-right">🌾 القمح (محدود)</div>
+      <div class="card" data-aos="fade-right">🫒 الزيتون (أساسي)</div>
+      <div class="card" data-aos="fade-right">🌿 الزعفران (نادر)</div>
+    </div>
+  </section>
+
+  <!-- 🟢 Plants -->
+  <section id="plants" class="section">
+    <h2 data-aos="fade-up">النباتات</h2>
+    <div class="cards">
+      <div class="card" data-aos="fade-left">🌱 أعشاب طبية</div>
+      <div class="card" data-aos="fade-left">🌼 نباتات عطرية</div>
+      <div class="card" data-aos="fade-left">🌳 أشجار مثمرة</div>
+    </div>
+  </section>
+
+  <!-- 🟢 Vertical Farming -->
+  <section id="vertical" class="section dark">
+    <h2 data-aos="fade-up">الزراعة العمودية</h2>
+    <p class="desc" data-aos="fade-up">
+      أسلوب حديث يعتمد على الزراعة في طبقات عمودية باستخدام تقنيات الإضاءة والري المغلق. يوفر المساحة والمياه.
+    </p>
+    <div class="vertical-farm" data-aos="zoom-in">🌱🌱🌱<br>🌱🌱🌱<br>🌱🌱🌱</div>
+  </section>
+
+  <!-- 🟢 Diseases -->
+  <section id="diseases" class="section">
+    <h2 data-aos="fade-up">أمراض النباتات</h2>
+    <div class="cards">
+      <div class="card" data-aos="flip-up">🍂 البياض الدقيقي</div>
+      <div class="card" data-aos="flip-up">🦠 الذبول الفطري</div>
+      <div class="card" data-aos="flip-up">🐞 الآفات الزراعية</div>
+    </div>
+  </section>
+
+  <!-- 🟢 Challenges -->
+  <section id="challenges" class="section">
+    <h2 data-aos="fade-up">التحديات والحلول</h2>
+    <div class="cards">
+      <div class="card" data-aos="flip-left">💧 ندرة المياه <p>الأردن من أفقر الدول مائياً</p></div>
+      <div class="card" data-aos="flip-left">🌍 التغير المناخي <p>يؤثر على إنتاجية الزراعة</p></div>
+      <div class="card" data-aos="flip-left">🌾 محدودية الأراضي <p>ضغط عمراني ورعوي</p></div>
+      <div class="card" data-aos="flip-left">✅ الحلول <p>الزراعة الذكية والعمودية</p></div>
+    </div>
+  </section>
+
+  <!-- 🟢 Footer -->
+  <footer>
+    <p>© 2025 الأمن الغذائي في الأردن</p>
+  </footer>
+
+  <!-- JS -->
+  <script src="script.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>AOS.init({ duration: 1000 });</script>
+</body>
+</html>
