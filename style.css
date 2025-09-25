@@ -228,6 +228,7 @@ object-fit: cover;
   height: 230px;
   border-radius: 16px;
   overflow: hidden;
+  animation: fadeIn 3s forwards;
 }
 
 .wave {
