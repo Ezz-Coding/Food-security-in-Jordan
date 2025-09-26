@@ -3,10 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Irrigation</title>
-      <link rel="stylesheet" href="style.css">
+    <title>Agriculture</title>
+          <link rel="stylesheet" href="./../Tools/style.css">
 
-     <!-- AOS Animation -->
+<!-- icon -->
+  <link
+    href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp"
+    rel="stylesheet">
+  <!-- AOS Animation -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <!-- Remix Icon -->
   <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet">
@@ -16,10 +20,13 @@
 
 </head>
 <body>
-     <!-- 🟢 Navbar -->
+      <!-- 🟢 Navbar -->
   <header>
     <nav>
       <h1> <i class="ri-plant-line"></i> Food Security</h1>
+      <div class="menu-toggle" id="menu-toggle">
+      <span class="material-icons">menu</span>
+    </div>
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="Statistics.html">Statistics</a></li>
@@ -28,36 +35,18 @@
         <li><a href="Crops-Plants.html">Crops-Plants</a></li>
         <li><a href="Vertical.html">Vertical</a></li>
         <li><a href="Diseases-Challenges.html">Diseases-Challenges</a></li>
+        <li><a href="./Data/Data.html">Data</a></li>
+
       </ul>
     </nav>
   </header>
-     <!-- 🟢 Irrigation -->
-  <section id="irrigation" class="section">
-    <h2 data-aos="fade-up">Irrigation Systems</h2>
-    <div class="cards-Data">
-      <div class="card-Data" data-aos="fade-up" >
-        <div class="card-image">
-          <img src="./Access/Drip-irrigation.webp" alt="Drip irrigation">
-        </div>
-        <div class="category">Drip Irrigation</div>
-        <div class="heading">Most water-efficient</div>
-      </div>
-
-      <div class="card-Data" data-aos="fade-up" data-aos-delay="100">
-        <div class="card-image">
-          <img src="./Access/Irrigation-by-spraying.webp" alt="Sprinkler irrigation">
-        </div>
-        <div class="category">Sprinkler Irrigation</div>
-        <div class="heading">Often used for forages</div>
-      </div>
-
-      <div class="card-Data" data-aos="fade-up" data-aos-delay="200">
-        <div class="card-image">
-          <img src="./Access/The-exaggeration-in-immersion.jpg" alt="Flood irrigation">
-        </div>
-        <div class="category">Flood Irrigation</div>
-        <div class="heading">Old and less common</div>
-      </div>
+      <!-- 🟢 Agriculture Section -->
+  <section id="agriculture" class="section dark">
+    <h2 data-aos="fade-up">Farming Types</h2>
+    <div class="cards">
+      <div class="card" data-aos="flip-right">🌾 Rainfed Farming <p>Relies on rainfall</p></div>
+      <div class="card" data-aos="flip-right">💧 Irrigated Farming <p>Concentrated in the Jordan Valley</p></div>
+      <div class="card" data-aos="flip-right">🏠 Greenhouses <p>Year-round production</p></div>
     </div>
   </section>
   <!-- 🟢 Footer -->
@@ -74,11 +63,15 @@
     <div class="footer-links">
       <h4>Quick Links</h4>
       <ul>
-        <li><a href="#stats">Statistics</a></li>
-        <li><a href="#agriculture">Farming Types</a></li>
-        <li><a href="#irrigation">Irrigation Systems</a></li>
-        <li><a href="#crops">Crops</a></li>
-        <li><a href="#challenges">Challenges</a></li>
+      <li><a href="index.html">Home</a></li>
+        <li><a href="Statistics.html">Statistics</a></li>
+        <li><a href="Agriculture.html">Agriculture</a></li>
+        <li><a href="Irrigation.html">Irrigation</a></li>
+        <li><a href="Crops-Plants.html">Crops-Plants</a></li>
+        <li><a href="Vertical.html">Vertical</a></li>
+        <li><a href="Diseases-Challenges.html">Diseases-Challenges</a></li>
+        <li><a href="./Data/Data.html">Data</a></li>
+
       </ul>
     </div>
 
@@ -98,8 +91,18 @@
   </div>
 </footer>
  <!-- JS -->
-  <script src="script.js"></script>
+  <script src="./../Tools/script.js"></script>
+
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>AOS.init({ duration: 1000, once: true, offset: 120 });</script>
+  <script>
+  const menuToggle = document.getElementById("menu-toggle");
+  const navLinks = document.querySelector("nav ul");
+
+  menuToggle.addEventListener("click", () => {
+    navLinks.classList.toggle("show");
+  });
+</script>
+
 </body>
 </html>

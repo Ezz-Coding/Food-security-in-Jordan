@@ -4,8 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Crops-Plants</title>
-      <link rel="stylesheet" href="style.css">
+     <link rel="stylesheet" href="./../Tools/style.css">
 
+        
+<!-- icon -->
+  <link
+    href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp"
+    rel="stylesheet">
        <!-- AOS Animation -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <!-- Remix Icon -->
@@ -19,6 +24,9 @@
   <header>
     <nav>
       <h1> <i class="ri-plant-line"></i> Food Security</h1>
+      <div class="menu-toggle" id="menu-toggle">
+      <span class="material-icons">menu</span>
+    </div>
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="Statistics.html">Statistics</a></li>
@@ -27,6 +35,8 @@
         <li><a href="Crops-Plants.html">Crops-Plants</a></li>
         <li><a href="Vertical.html">Vertical</a></li>
         <li><a href="Diseases-Challenges.html">Diseases-Challenges</a></li>
+        <li><a href="./Data/Data.html">Data</a></li>
+
       </ul>
     </nav>
   </header>
@@ -110,11 +120,16 @@ Fruit trees
     <div class="footer-links">
       <h4>Quick Links</h4>
       <ul>
-        <li><a href="#stats">Statistics</a></li>
-        <li><a href="#agriculture">Farming Types</a></li>
-        <li><a href="#irrigation">Irrigation Systems</a></li>
-        <li><a href="#crops">Crops</a></li>
-        <li><a href="#challenges">Challenges</a></li>
+        
+    <li><a href="index.html">Home</a></li>
+        <li><a href="Statistics.html">Statistics</a></li>
+        <li><a href="Agriculture.html">Agriculture</a></li>
+        <li><a href="Irrigation.html">Irrigation</a></li>
+        <li><a href="Crops-Plants.html">Crops-Plants</a></li>
+        <li><a href="Vertical.html">Vertical</a></li>
+        <li><a href="Diseases-Challenges.html">Diseases-Challenges</a></li>
+        <li><a href="./Data/Data.html">Data</a></li>
+
       </ul>
     </div>
 
@@ -134,8 +149,19 @@ Fruit trees
   </div>
 </footer>
  <!-- JS -->
-  <script src="script.js"></script>
+  <script src="./../Tools/script.js"></script>
+
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>AOS.init({ duration: 1000, once: true, offset: 120 });</script>
+  <script>
+  const menuToggle = document.getElementById("menu-toggle");
+  const navLinks = document.querySelector("nav ul");
+
+  menuToggle.addEventListener("click", () => {
+    navLinks.classList.toggle("show");
+  });
+</script>
+
+
 </body>
 </html>
