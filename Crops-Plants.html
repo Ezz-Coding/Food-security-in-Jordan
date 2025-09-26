@@ -1,24 +1,21 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Food Security in Jordan</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crops-Plants</title>
+      <link rel="stylesheet" href="style.css">
 
-  <!-- AOS Animation -->
+       <!-- AOS Animation -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <!-- Remix Icon -->
   <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet">
 
  <!-- Favicon -->
   <link rel="icon" type="image/png" href="./Access/Logo.png">
-
-  <!-- Chart.js -->
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
-  <!-- 🟢 Navbar -->
+         <!-- 🟢 Navbar -->
   <header>
     <nav>
       <h1> <i class="ri-plant-line"></i> Food Security</h1>
@@ -33,29 +30,73 @@
       </ul>
     </nav>
   </header>
-
-  <!-- 🟢 Hero -->
-  <section class="hero">
-    <div id="three-container">
-      <!-- Put your Spline/3D here -->
-      <iframe src="https://my.spline.design/placeholder" frameborder="0" width="100%" height="100%"></iframe>
-    </div>
-
-    <div class="hero-text" data-aos="fade-up">
-      <h2>Food Security in Jordan</h2>
-      <p>Accurate information and statistics on agriculture, water, crops, and innovations.</p>
-      <a href="#stats" class="btn">Start Exploring</a>
+  <!-- 🟢 Crops -->
+  <section id="crops" class="section dark">
+    <h2 data-aos="fade-up">Crops</h2>
+    <div class="cards">
+      <div class="card" data-aos="fade-right">🍅 Tomatoes (abundant)</div>
+      <div class="card" data-aos="fade-right">🌾 Wheat (limited)</div>
+      <div class="card" data-aos="fade-right">🫒 Olives (key crop)</div>
+      <div class="card" data-aos="fade-right">🌿 Saffron (rare)</div>
     </div>
   </section>
 
+  <!-- 🟢 Plants -->
+  <section id="plants" class="section">
+    <h2 data-aos="fade-up">Plants</h2>
+    <div class="cards">
+      <div class="e-card " data-aos="fade-up" >
+  <div class="image"></div>
+  
+  <div class="wave"></div>
+  <div class="wave"></div>
+  <div class="wave"></div>
+  
 
+      <div class="infotop">
+<i class="ri-plant-line"></i>
+<br>      
+Medicinal herbs
+<br>
+<div class="name"></div>
+  </div>
+</div>
+      <div class="e-card " data-aos="fade-up" data-aos-delay="100" >
+  <div class="image"></div>
+  
+  <div class="wave"></div>
+  <div class="wave"></div>
+  <div class="wave"></div>
+  
 
+      <div class="infotop">
+<i class="ri-flower-line"></i>
+<br>      
+ Aromatic plants
+<br>
+<div class="name"></div>
+  </div>
+</div>
+      <div class="e-card " data-aos="fade-up" data-aos-delay="200">
+  <div class="image"></div>
+  
+  <div class="wave"></div>
+  <div class="wave"></div>
+  <div class="wave"></div>
+  
 
+      <div class="infotop">
+<i class="ri-tree-line"></i>
+<br>      
+Fruit trees
+<br>
+<div class="name"></div>
+  </div>
+</div>
 
- 
-
-
-  <!-- 🟢 Footer -->
+    </div>
+  </section>
+    <!-- 🟢 Footer -->
 <footer>
   <div class="footer-container">
     <div class="footer-about">
@@ -92,9 +133,7 @@
     <p>© 2025 Food Security in Jordan | All Rights Reserved</p>
   </div>
 </footer>
-
-
-  <!-- JS -->
+ <!-- JS -->
   <script src="script.js"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>AOS.init({ duration: 1000, once: true, offset: 120 });</script>
