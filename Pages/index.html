@@ -115,15 +115,23 @@
   <script src="./../Tools/script.js"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>AOS.init({ duration: 1000, once: true, offset: 120 });</script>
-</body>
+
 <script>
   const menuToggle = document.getElementById("menu-toggle");
   const navLinks = document.querySelector("nav ul");
+  const menuIcon = menuToggle.querySelector(".material-icons");
 
   menuToggle.addEventListener("click", () => {
     navLinks.classList.toggle("show");
+
+ 
+    if (navLinks.classList.contains("show")) {
+      menuIcon.textContent = "close"; 
+    } else {
+      menuIcon.textContent = "menu"; 
+    }
   });
 </script>
-
+</body>
 
 </html>

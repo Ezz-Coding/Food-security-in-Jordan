@@ -116,9 +116,17 @@
   <script>
   const menuToggle = document.getElementById("menu-toggle");
   const navLinks = document.querySelector("nav ul");
+  const menuIcon = menuToggle.querySelector(".material-icons");
 
   menuToggle.addEventListener("click", () => {
     navLinks.classList.toggle("show");
+
+ 
+    if (navLinks.classList.contains("show")) {
+      menuIcon.textContent = "close"; 
+    } else {
+      menuIcon.textContent = "menu"; 
+    }
   });
 </script>
 
