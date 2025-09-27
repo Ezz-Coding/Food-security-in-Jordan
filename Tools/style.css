@@ -5,7 +5,7 @@ html {
 :root {
   --background-color: #f9fafb;
   --text-color: #333;
-  --header-background: linear-gradient(90deg, #6ee7b7, #3b82f6, #9333ea);
+  --header-background: #333;
   --header-text-color: #fff;
   --card-background: #fff;
   --card-shadow: 0 6px 14px rgba(0, 0, 0, 0.12);
