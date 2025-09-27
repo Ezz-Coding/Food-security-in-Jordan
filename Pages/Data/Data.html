@@ -4,6 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Data-Elments</title>
+    <!-- icon -->
+  <link
+    href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp"
+    rel="stylesheet">
 
     <link rel="stylesheet" href="styleData.css" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
@@ -137,5 +141,21 @@
     <script src="scriptData.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>AOS.init({ duration: 1000, once: true, offset: 120 });</script>
+    <script>
+  const menuToggle = document.getElementById("menu-toggle");
+  const navLinks = document.querySelector("nav ul");
+  const menuIcon = menuToggle.querySelector(".material-icons");
+
+  menuToggle.addEventListener("click", () => {
+    navLinks.classList.toggle("show");
+
+ 
+    if (navLinks.classList.contains("show")) {
+      menuIcon.textContent = "close"; 
+    } else {
+      menuIcon.textContent = "menu"; 
+    }
+  });
+</script>
     </body>
     </html>
