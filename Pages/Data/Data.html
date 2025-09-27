@@ -1,161 +1,171 @@
-    <!DOCTYPE html>
-    <html lang="en">
-    <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Data-Elments</title>
-    <!-- icon -->
-  <link
-    href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp"
-    rel="stylesheet">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact</title>
 
-    <link rel="stylesheet" href="styleData.css" />
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
-    <link rel="icon" type="image/png" href="./Access/Logo.png" />
-    <!-- Chart.js -->
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    </head>
-    <body>
-    <!-- Navbar -->
+  <!-- Fonts & Icons -->
+  <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+
+  <!-- AOS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="./../../Access/Logo.png" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="styleData.css" />
+
+  <!-- Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <!-- AOS JS (يجب أن يحمّل قبل script.js لأننا نستخدمه داخله) -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+</head>
+<body>
+  <!-- Navbar -->
   <header>
     <nav>
-      <h1> <i class="ri-plant-line"></i> Food Security</h1>
-      <div class="menu-toggle" id="menu-toggle">
-      <span class="material-icons">menu</span>
-    </div>
+      <h1><i class="ri-plant-line"></i> Food Security</h1>
+      <div class="menu-toggle" id="menu-toggle"><span class="material-icons">menu</span></div>
       <ul>
-        <li><a href="../index.html">Home</a></li>
+        <li><a href="../Home.html">Home</a></li>
         <li><a href="../Statistics.html">Statistics</a></li>
         <li><a href="../Agriculture.html">Agriculture</a></li>
         <li><a href="../Agriculture.html">Irrigation</a></li>
         <li><a href="../Crops-Plants.html">Crops-Plants</a></li>
         <li><a href="../Vertical.html">Vertical</a></li>
         <li><a href="../Diseases-Challenges.html">Diseases-Challenges</a></li>
-        <li><a href="./Data/Data.html">Data</a></li>
-
+        <li><a href="./Data/Data.html">Contact</a></li>
       </ul>
     </nav>
   </header>
 
-
-    <!-- API Stats -->
-    <section id="api-stats" class="section">
-        <h2 data-aos="fade-up">API Statistics</h2>
-        <p class="desc" data-aos="fade-up">Posts per user (JSONPlaceholder → treated as crop entries)</p>
-        <div class="charts">
-        <div class="chart-box" data-aos="zoom-in">
-            <h3>Entries per User</h3>
-            <canvas id="postsByUserChart"></canvas>
-        </div>
-        </div>
-    </section>
-
-  
-    <!-- Crop Finder -->
-<section id="crop-finder" class="section dark">
-  <h2 data-aos="fade-up">Crop Finder</h2>
-
-  <!-- Add form -->
-  <div class="filters" data-aos="fade-up" style="margin-bottom:8px">
-    <input id="add-name" placeholder="New crop name..." />
-    <select id="add-type">
-      <option value="Vegetable">Vegetable</option>
-      <option value="Grain">Grain</option>
-      <option value="Herb">Herb</option>
-    </select>
-    <select id="add-rarity">
-      <option value="Common">Common</option>
-      <option value="Uncommon">Uncommon</option>
-      <option value="Rare">Rare</option>
-      <option value="Epic">Epic</option>
-      <option value="Legendary">Legendary</option>
-    </select>
-    <button id="add-btn" type="button">Add</button>
-  </div>
-
-  <!-- Search & Filters -->
-  <div class="filters" data-aos="fade-up">
-    <input id="crop-search" placeholder="Search by name..." />
-    <select id="crop-type">
-      <option value="">All types</option>
-      <option value="Vegetable">Vegetable</option>
-      <option value="Grain">Grain</option>
-      <option value="Herb">Herb</option>
-    </select>
-    <select id="crop-rarity">
-      <option value="">All rarity</option>
-      <option value="Common">Common</option>
-      <option value="Uncommon">Uncommon</option>
-      <option value="Rare">Rare</option>
-      <option value="Epic">Epic</option>
-      <option value="Legendary">Legendary</option>
-    </select>
-  </div>
-
-  <ul id="crop-list" class="crop-grid"></ul>
-</section>
-
-
-    <!-- Footer (نفس الموجود عندك) -->
-  <footer>
-  <div class="footer-container">
-    <div class="footer-about">
-      <h3>Food Security in Jordan</h3>
-      <p>
-        A platform providing insights, data, and awareness about agriculture, 
-        water, and food security challenges in Jordan.
-      </p>
-    </div>
-
-    <div class="footer-links">
-      <h4>Quick Links</h4>
-      <ul>
-        <li><a href="./../index.html">Home</a></li>
-        <li><a href="./../Statistics.html">Statistics</a></li>
-        <li><a href="./../Agriculture.html">Agriculture</a></li>
-        <li><a href="./../Irrigation.html">Irrigation</a></li>
-        <li><a href="./../Crops-Plants.html">Crops-Plants</a></li>
-        <li><a href="./../Vertical.html">Vertical</a></li>
-        <li><a href="./../Diseases-Challenges.html">Diseases-Challenges</a></li>
-        <li><a href="Data.html">Data</a></li>
-
-      </ul>
-    </div>
-
-    <div class="footer-social">
-      <h4>Follow Us</h4>
-      <div class="social-icons">
-        <a href="#"><i class="ri-facebook-circle-fill"></i></a>
-        <a href="#"><i class="ri-twitter-x-fill"></i></a>
-        <a href="#"><i class="ri-instagram-fill"></i></a>
-        <a href="#"><i class="ri-linkedin-box-fill"></i></a>
+  <!-- API Stats -->
+  <section id="api-stats" class="section">
+    <h2 data-aos="fade-up">Statistics</h2>
+    <p class="desc" data-aos="fade-up">Posts per user</p>
+    <div class="charts">
+      <div class="chart-box" data-aos="zoom-in">
+        <h3>Entries per User</h3>
+        <canvas id="postsByUserChart"></canvas>
       </div>
     </div>
-  </div>
+  </section>
 
-  <div class="footer-bottom">
-    <p>© 2025 Food Security in Jordan | All Rights Reserved</p>
-  </div>
-</footer>
-    <script src="scriptData.js"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>AOS.init({ duration: 1000, once: true, offset: 120 });</script>
-    <script>
-  const menuToggle = document.getElementById("menu-toggle");
-  const navLinks = document.querySelector("nav ul");
-  const menuIcon = menuToggle.querySelector(".material-icons");
+  <!-- Crop Finder -->
+  <section id="crop-finder" class="section dark">
+    <h2 data-aos="fade-up">Crop Finder</h2>
 
-  menuToggle.addEventListener("click", () => {
-    navLinks.classList.toggle("show");
+    <!-- Add form -->
+    <div class="filters" data-aos="fade-up" style="margin-bottom:8px">
+      <input id="add-name" placeholder="New crop name..." />
+      <select id="add-type">
+        <option value="Vegetable">Vegetable</option>
+        <option value="Grain">Grain</option>
+        <option value="Herb">Herb</option>
+      </select>
+      <select id="add-rarity">
+        <option value="Common">Common</option>
+        <option value="Uncommon">Uncommon</option>
+        <option value="Rare">Rare</option>
+        <option value="Epic">Epic</option>
+        <option value="Legendary">Legendary</option>
+      </select>
+      <button id="add-btn" type="button">Add</button>
+    </div>
 
- 
-    if (navLinks.classList.contains("show")) {
-      menuIcon.textContent = "close"; 
-    } else {
-      menuIcon.textContent = "menu"; 
-    }
-  });
-</script>
-    </body>
-    </html>
+    <!-- Search & Filters -->
+    <div class="filters" data-aos="fade-up">
+      <input id="crop-search" placeholder="Search by name..." />
+      <select id="crop-type">
+        <option value="">All types</option>
+        <option value="Vegetable">Vegetable</option>
+        <option value="Grain">Grain</option>
+        <option value="Herb">Herb</option>
+      </select>
+      <select id="crop-rarity">
+        <option value="">All rarity</option>
+        <option value="Common">Common</option>
+        <option value="Uncommon">Uncommon</option>
+        <option value="Rare">Rare</option>
+        <option value="Epic">Epic</option>
+        <option value="Legendary">Legendary</option>
+      </select>
+      <!-- NEW: Source filter -->
+      <select id="source-filter" title="Source">
+        <option value="">All sources</option>
+        <option value="local">My Adds Only</option>
+        <option value="api">API Only</option>
+      </select>
+    </div>
+
+    <ul id="crop-list" class="crop-grid"></ul>
+  </section>
+  <!-- Nav bar pages -->
+   <div class="Main_NavbarPages">
+    
+    <div class="Pages"></div>
+    <div class="Pages"></div>
+    <div class="Pages"></div>
+    <div class="Pages"></div>
+    <div class="Pages"></div>
+    <div class="Pages"></div>
+    <div class="onPage"></div>
+
+   </div>
+      <div class="Main_NavbarPages">
+<span>1</span>
+<span>2</span>
+<span>3</span>
+<span>4</span>
+<span>5</span>
+<span>6</span>
+<span>7</span>
+   </div>
+  <!-- Footer -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-about">
+        <h3>Food Security in Jordan</h3>
+        <p>
+          A platform providing insights, data, and awareness about agriculture, 
+          water, and food security challenges in Jordan.
+        </p>
+      </div>
+
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="./../Home.html">Home</a></li>
+          <li><a href="./../Statistics.html">Statistics</a></li>
+          <li><a href="./../Agriculture.html">Agriculture</a></li>
+          <li><a href="./../Irrigation.html">Irrigation</a></li>
+          <li><a href="./../Crops-Plants.html">Crops-Plants</a></li>
+          <li><a href="./../Vertical.html">Vertical</a></li>
+          <li><a href="./../Diseases-Challenges.html">Diseases-Challenges</a></li>
+          <li><a href="Data.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-social">
+        <h4>Follow Us</h4>
+        <div class="social-icons">
+          <a href="#"><i class="ri-facebook-circle-fill"></i></a>
+          <a href="#"><i class="ri-twitter-x-fill"></i></a>
+          <a href="#"><i class="ri-instagram-fill"></i></a>
+          <a href="#"><i class="ri-linkedin-box-fill"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2025 Food Security in Jordan | All Rights Reserved</p>
+    </div>
+  </footer>
+
+  <!-- App Script -->
+  <script src="scriptData.js"></script>
+</body>
+</html>

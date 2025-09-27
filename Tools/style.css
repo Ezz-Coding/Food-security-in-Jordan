@@ -86,7 +86,24 @@ nav li a::after {
 nav li a:hover::after {
   width: 100%;
 }
+.Main_NavbarPages{
+  width:20%;
+  margin-left: 40%;
+  display: grid;
+  grid-template-columns: repeat(7,auto);
+  gap: 10px;
+  margin-top: 50px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+.Pages{
+  background-color: #6c6c6c;
+  height: 5px;
+}
+.onPage{
+  background-color: #3B82F6;
 
+}
 /* Hero */
 .hero {
   display: grid;
@@ -96,19 +113,27 @@ nav li a:hover::after {
   overflow: hidden;
 }
 #three-container {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
-  z-index: 0;
+  height: 100vh;
+  z-index: -1;
+}
+#three-container video{
+  top: 0;
+  left: 0;
+  width: 100%;
+   height: 100%;    
+  object-fit: cover;
+  filter: blur(4px);
 }
 .hero-text {
   position: relative;
   z-index: 1;
   text-align: center;
   color: #fff;
-  background: #388e3c9d;
+  background: rgba(20, 28, 24, 0.55); 
   padding: 20px 30px;
   border-radius: 12px;
   backdrop-filter: blur(5px);
@@ -123,16 +148,19 @@ nav li a:hover::after {
   display: inline-block;
   padding: 12px 24px;
   margin-top: 20px;
-  background: linear-gradient(45deg, #ffd54f, #ff8a65);
-  color: #333;
-  border-radius: 8px;
+     background: linear-gradient(90deg, #3B82F6, #6EE7B7);
+
+  color: aliceblue;
+  border-radius: 5px;
   font-weight: bold;
   transition: 0.2s ease-in;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.25);
 }
 .btn:hover {
-  background: linear-gradient(45deg, #ffb300, #ff7043);
-  transform: translateY(-1px) scale(1.01);
+    background: linear-gradient(120deg, #4084f2, #6EE7B7);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.364);
+
+  transform: translateY(-1px) ;
 }
 
 /* Sections */
@@ -860,7 +888,78 @@ footer {
   color: #ffd54f;
   transform: scale(1.2);
 }
+@keyframes drop {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(80px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
 
+.lava-lamp {
+  top: 50%;
+  position: relative;
+  width: 50px;
+  height: 100px;
+  background: #000;
+  border-radius: 25px;
+  overflow: hidden;
+}
+
+.bubble {
+  position: absolute;
+  top: 0;
+  width: 20px;
+  height: 20px;
+  background: linear-gradient(to bottom, #e64980, #ff8787);
+  border-radius: 50%;
+  left: 15px;
+  animation: drop 5s ease-in-out infinite;
+}
+.bubble1 {
+  position: absolute;
+  top: 0;
+  width: 20px;
+  height: 20px;
+  background: linear-gradient(to bottom, #82c91e, #3bc9db);
+  border-radius: 50%;
+  left: 1px;
+  animation: drop 3s ease-in-out infinite;
+}
+.bubble2 {
+  position: absolute;
+  top: 0;
+  width: 20px;
+  height: 20px;
+  background: linear-gradient(to bottom, #7950f2, #f783ac);
+  border-radius: 50%;
+  left: 30px;
+  animation: drop 4s ease-in-out infinite;
+}
+.bubble3 {
+  position: absolute;
+  top: 0;
+  width: 20px;
+  height: 20px;
+  background: linear-gradient(to bottom, #4481eb, #04befe);
+  border-radius: 50%;
+  left: 20px;
+  animation: drop 6s ease-in-out infinite;
+}
+.Main_loading{
+  background-color: aliceblue;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;  
+  height: 100vh;
+  justify-items: center;
+  z-index: -1;
+}
 .footer-bottom {
   text-align: center;
   margin-top: 30px;
@@ -1413,6 +1512,26 @@ footer {
   #challenges #card p {
     font-size: 14px;
  
+
+}
+}
+@media (max-width:571px) {
+  .Main_NavbarPages{
+  width:40%;
+  margin-left: 30%;
+  display: grid;
+  grid-template-columns: repeat(7,auto);
+  gap: 10px;
+  margin-top: 50px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+.Pages{
+  background-color: #6c6c6c;
+  height: 5px;
+}
+.onPage{
+  background-color: #3B82F6;
 
 }
 }

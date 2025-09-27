@@ -1,137 +1,27 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Food Security in Jordan</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loading</title>
+    <link rel="stylesheet" href="./../Tools/style.css">
+  <link rel="icon" type="image/png" href="./../Access/Logo.png">
 
-  <link rel="stylesheet" href="./../Tools/style.css">
-
-
-
-<!-- icon -->
-  <link
-    href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp"
-    rel="stylesheet">
-
-  <!-- AOS Animation -->
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  <!-- Remix Icon -->
-  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet">
-
- <!-- Favicon -->
-  <link rel="icon" type="image/png" href="./Access/Logo.png">
-
-  <!-- Chart.js -->
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
-  <!-- 🟢 Navbar -->
-  <header>
-    <nav>
-      <h1> <i class="ri-plant-line"></i> Food Security</h1>
-      <div class="menu-toggle" id="menu-toggle">
-      <span class="material-icons">menu</span>
-    </div>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="Statistics.html">Statistics</a></li>
-        <li><a href="Agriculture.html">Agriculture</a></li>
-        <li><a href="Irrigation.html">Irrigation</a></li>
-        <li><a href="Crops-Plants.html">Crops-Plants</a></li>
-        <li><a href="Vertical.html">Vertical</a></li>
-        <li><a href="Diseases-Challenges.html">Diseases-Challenges</a></li>
-        <li><a href="./Data/Data.html">Data</a></li>
-
-      </ul>
-    </nav>
-  </header>
-
-  <!-- 🟢 Hero -->
-  <section class="hero">
-    <div id="three-container">
-      <!-- Put your Spline/3D here -->
-      <iframe src="https://my.spline.design/placeholder" frameborder="0" width="100%" height="100%"></iframe>
-    </div>
-
-    <div class="hero-text" data-aos="fade-up">
-      <h2>Food Security in Jordan</h2>
-      <p>Accurate information and statistics on agriculture, water, crops, and innovations.</p>
-      <a href="#stats" class="btn">Start Exploring</a>
-    </div>
-  </section>
-
-
-
-
-
- 
-
-
-  <!-- 🟢 Footer -->
-<footer>
-  <div class="footer-container">
-    <div class="footer-about">
-      <h3>Food Security in Jordan</h3>
-      <p>
-        A platform providing insights, data, and awareness about agriculture, 
-        water, and food security challenges in Jordan.
-      </p>
-    </div>
-
-    <div class="footer-links">
-      <h4>Quick Links</h4>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="Statistics.html">Statistics</a></li>
-        <li><a href="Agriculture.html">Agriculture</a></li>
-        <li><a href="Irrigation.html">Irrigation</a></li>
-        <li><a href="Crops-Plants.html">Crops-Plants</a></li>
-        <li><a href="Vertical.html">Vertical</a></li>
-        <li><a href="Diseases-Challenges.html">Diseases-Challenges</a></li>
-        <li><a href="./Data/Data.html">Data</a></li>
-
-      </ul>
-    </div>
-
-    <div class="footer-social">
-      <h4>Follow Us</h4>
-      <div class="social-icons">
-        <a href="#"><i class="ri-facebook-circle-fill"></i></a>
-        <a href="#"><i class="ri-twitter-x-fill"></i></a>
-        <a href="#"><i class="ri-instagram-fill"></i></a>
-        <a href="#"><i class="ri-linkedin-box-fill"></i></a>
-      </div>
-    </div>
-  </div>
-
-  <div class="footer-bottom">
-    <p>© 2025 Food Security in Jordan | All Rights Reserved</p>
-  </div>
-</footer>
-
-
-  <!-- JS -->
-  <script src="./../Tools/script.js"></script>
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>AOS.init({ duration: 1000, once: true, offset: 120 });</script>
-
-<script>
-  const menuToggle = document.getElementById("menu-toggle");
-  const navLinks = document.querySelector("nav ul");
-  const menuIcon = menuToggle.querySelector(".material-icons");
-
-  menuToggle.addEventListener("click", () => {
-    navLinks.classList.toggle("show");
-
- 
-    if (navLinks.classList.contains("show")) {
-      menuIcon.textContent = "close"; 
-    } else {
-      menuIcon.textContent = "menu"; 
-    }
-  });
-</script>
+    <div class="Main_loading">
+   <div class="lava-lamp">
+  <div class="bubble"></div>
+  <div class="bubble1"></div>
+  <div class="bubble2"></div>
+  <div class="bubble3"></div>
+</div>
+ </div>
+ <script>
+    setInterval(() => {
+    location.href='Home.html';
+        
+    }, 2000);
+ </script>
 </body>
-
 </html>

@@ -36,7 +36,6 @@ new Chart(document.getElementById("cropsChart"), {
   }
 });
 
-
 // Line chart: تطور إنتاج الطماطم
 new Chart(document.getElementById("lineChart"), {
   type: "line",

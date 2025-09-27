@@ -1,4 +1,5 @@
-- [Home](./Pages/index.html)
+- [Loading](./Pages/index.html)
+- [Home](./Pages/Home.html)
 - [Statistics](./Pages/Statistics.html)
 - [Agriculture](./Pages/Agriculture.html)
 - [Irrigation](./Pages/Irrigation.html)
