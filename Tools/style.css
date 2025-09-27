@@ -1,3 +1,48 @@
+/* CSS Variables for Theme System */
+:root {
+  /* Light Theme (Default) */
+  --bg-primary: #f9fafb;
+  --bg-secondary: #ffffff;
+  --bg-tertiary: #e8f5e9;
+  --text-primary: #333333;
+  --text-secondary: #555555;
+  --text-tertiary: #666666;
+  --border-color: #e5e7eb;
+  --shadow-light: rgba(0, 0, 0, 0.12);
+  --shadow-medium: rgba(0, 0, 0, 0.15);
+  --shadow-heavy: rgba(0, 0, 0, 0.25);
+  --card-bg: #ffffff;
+  --hero-overlay: rgba(20, 28, 24, 0.55);
+  --section-bg: #ffffff;
+  --challenge-bg: #fffde7;
+  --challenge-text: #f57f17;
+  --chart-bg: #ffffff;
+  --footer-bg: linear-gradient(90deg, #3b82f6, #6ee7b7);
+  --loading-bg: aliceblue;
+}
+
+/* Dark Theme */
+[data-theme="dark"] {
+  --bg-primary: #0f172a;
+  --bg-secondary: #1e293b;
+  --bg-tertiary: #334155;
+  --text-primary: #f1f5f9;
+  --text-secondary: #cbd5e1;
+  --text-tertiary: #94a3b8;
+  --border-color: #475569;
+  --shadow-light: rgba(0, 0, 0, 0.3);
+  --shadow-medium: rgba(0, 0, 0, 0.4);
+  --shadow-heavy: rgba(0, 0, 0, 0.6);
+  --card-bg: #1e293b;
+  --hero-overlay: rgba(0, 0, 0, 0.7);
+  --section-bg: #0f172a;
+  --challenge-bg: #1a202c;
+  --challenge-text: #fbbf24;
+  --chart-bg: #1e293b;
+  --footer-bg: linear-gradient(90deg, #1e40af, #059669);
+  --loading-bg: #0f172a;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -5,11 +50,12 @@ html {
 body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
-  background: #f9fafb;
-  color: #333;
+  background: var(--bg-primary);
+  color: var(--text-primary);
   scroll-behavior: smooth;
   line-height: 1.6;
   overflow-x: hidden;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 h1,
@@ -18,12 +64,40 @@ h3 {
   text-align: center;
   font-weight: 700;
   margin-bottom: 20px;
+  color: var(--text-primary);
 }
 
 a {
   text-decoration: none;
   color: inherit;
   transition: color 0.3s ease;
+}
+
+/* Theme Toggle Button */
+.theme-toggle {
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-right: 20px;
+  color: #fff;
+  font-size: 18px;
+  justify-self: end;
+}
+
+.theme-toggle:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: scale(1.1);
+}
+
+.theme-toggle i {
+  transition: transform 0.3s ease;
 }
 
 /* Navbar */
@@ -36,7 +110,7 @@ header {
   position: sticky;
   top: 0;
   z-index: 1000;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 4px 6px var(--shadow-medium);
   height: 80px;
 }
 header h1 {
@@ -55,7 +129,7 @@ header h1 {
 }
 nav {
   display: grid;
-  grid-template-columns: auto 1fr;
+  grid-template-columns: auto 1fr auto;
   align-items: center;
 }
 nav ul {
@@ -66,7 +140,7 @@ nav ul {
   gap: 1.5rem;
   margin: 0;
   padding: 0;
-  margin-right: 50px;
+  margin-right: 20px;
 }
 nav li a {
   color: #fff;
@@ -133,7 +207,7 @@ nav li a:hover::after {
   z-index: 1;
   text-align: center;
   color: #fff;
-  background: rgba(20, 28, 24, 0.55); 
+  background: var(--hero-overlay); 
   padding: 20px 30px;
   border-radius: 12px;
   backdrop-filter: blur(5px);
@@ -166,16 +240,17 @@ nav li a:hover::after {
 /* Sections */
 .section {
   padding: 80px 20px;
+  background: var(--section-bg);
   transition: background 0.5s ease;
 }
 .section.dark {
-  background: #e8f5e9;
+  background: var(--bg-tertiary);
 }
 .desc {
   max-width: 800px;
   margin: 0 auto 30px;
   text-align: center;
-  color: #555;
+  color: var(--text-secondary);
   font-size: 1.1rem;
 }
 
@@ -183,16 +258,15 @@ nav li a:hover::after {
 .cards-Data .card-Data {
   position: relative;
   width: 350px;
-  background: white;
+  background: var(--card-bg);
   padding: 0.4em;
   height: 350px;
   border-radius: 6px;
-  box-shadow: 0 0 30px 0.5px rgba(0, 0, 0, 0.138);
+  box-shadow: 0 0 30px 0.5px var(--shadow-light);
   transition: 0.2s ease;
 }
 .cards-Data .card-Data:hover {
-  box-shadow: 0 0 30px 0.5px rgba(0, 0, 0, 0.185);
-
+  box-shadow: 0 0 30px 0.5px var(--shadow-medium);
   top: -10px;
 }
 .cards {
@@ -220,10 +294,10 @@ nav li a:hover::after {
 }
 
 .card {
-  background: #fff;
+  background: var(--card-bg);
   padding: 25px 20px;
   border-radius: 15px;
-  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 6px 14px var(--shadow-light);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   text-align: center;
   font-size: 1.2rem;
@@ -233,7 +307,7 @@ nav li a:hover::after {
 }
 .card:hover {
   transform: translateY(-12px) scale(1.05);
-  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 12px 20px var(--shadow-heavy);
   background: linear-gradient(135deg, #81c784, #4fc3f7);
   animation: gradientMove 4s forwards;
   background-size: 800px 800px;
@@ -254,7 +328,7 @@ nav li a:hover::after {
 
 .heading {
   font-weight: 400;
-  color: rgb(88, 87, 87);
+  color: var(--text-tertiary);
   padding: 7px;
   font-size: 1.5rem;
 }
@@ -282,7 +356,7 @@ nav li a:hover::after {
 .e-card {
   margin: 100px auto;
   background: transparent;
-  box-shadow: 0px 8px 28px -9px rgba(0, 0, 0, 0.45);
+  box-shadow: 0px 8px 28px -9px var(--shadow-heavy);
   position: relative;
   width: 340px;
   height: 230px;
@@ -416,18 +490,18 @@ nav li a:hover::after {
 .chart-box canvas {
   width: 100% !important;
   height: 100% !important;
-  background: #fff;
+  background: var(--chart-bg);
   padding: 20px;
   border-radius: 20px;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 4px 16px var(--shadow-light);
 }
 
 /* Challenges */
 #challenges {
-  background: #fffde7;
+  background: var(--challenge-bg);
 }
 #challenges h2 {
-  color: #f57f17;
+  color: var(--challenge-text);
 }
 .cards-Hover {
   width: 60%;
@@ -439,7 +513,7 @@ nav li a:hover::after {
 .HoverCard {
   height: 300px;
   border-radius: 10px;
-  background-color: #e8f5e9;
+  background-color: var(--bg-tertiary);
   animation: fadeIn 2s ease;
 }
 .HoverCard .container .canvas #card {
@@ -829,7 +903,7 @@ nav li a:hover::after {
 }
 /* Footer */
 footer {
-  background: linear-gradient(90deg, #3b82f6, #6ee7b7);
+  background: var(--footer-bg);
   color: #fff;
   padding: 40px 20px 20px;
   font-family: "Cairo", sans-serif;
@@ -951,7 +1025,7 @@ footer {
   animation: drop 6s ease-in-out infinite;
 }
 .Main_loading{
-  background-color: aliceblue;
+  background-color: var(--loading-bg);
   width: 100%;
   position: fixed;
   top: 0;
@@ -1262,7 +1336,7 @@ footer {
   }
   nav {
     display: grid;
-    grid-template-columns: auto 1fr;
+    grid-template-columns: auto 1fr auto;
     align-items: center;
     width: 100%;
   }

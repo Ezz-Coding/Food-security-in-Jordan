@@ -1,3 +1,63 @@
+// Theme Management System
+class ThemeManager {
+  constructor() {
+    this.currentTheme = localStorage.getItem('theme') || 'light';
+    this.init();
+  }
+
+  init() {
+    this.applyTheme(this.currentTheme);
+    this.createThemeToggle();
+  }
+
+  applyTheme(theme) {
+    document.documentElement.setAttribute('data-theme', theme);
+    this.currentTheme = theme;
+    localStorage.setItem('theme', theme);
+    
+    // Update theme toggle icon
+    const toggleIcon = document.querySelector('.theme-toggle i');
+    if (toggleIcon) {
+      toggleIcon.textContent = theme === 'dark' ? 'light_mode' : 'dark_mode';
+    }
+  }
+
+  toggleTheme() {
+    const newTheme = this.currentTheme === 'light' ? 'dark' : 'light';
+    this.applyTheme(newTheme);
+  }
+
+  createThemeToggle() {
+    // Check if toggle already exists
+    if (document.querySelector('.theme-toggle')) return;
+
+    const nav = document.querySelector('nav');
+    if (!nav) return;
+
+    const toggleButton = document.createElement('button');
+    toggleButton.className = 'theme-toggle';
+    toggleButton.innerHTML = `<i class="material-icons">${this.currentTheme === 'dark' ? 'light_mode' : 'dark_mode'}</i>`;
+    toggleButton.setAttribute('aria-label', 'Toggle theme');
+    
+    toggleButton.addEventListener('click', () => {
+      this.toggleTheme();
+    });
+
+    // Insert toggle button before the menu toggle
+    const menuToggle = document.querySelector('.menu-toggle');
+    if (menuToggle) {
+      nav.insertBefore(toggleButton, menuToggle);
+    } else {
+      nav.appendChild(toggleButton);
+    }
+  }
+}
+
+// Initialize theme manager when DOM is loaded
+document.addEventListener('DOMContentLoaded', () => {
+  new ThemeManager();
+});
+
 // Pie chart: أنواع الزراعة
 new Chart(document.getElementById("agricultureChart"), {
   type: "pie",
